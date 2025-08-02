@@ -1,4 +1,3 @@
-import torch
 from transformers import pipeline
 import gradio as gr
 
@@ -15,5 +14,3 @@ def predict(prompt):
 # create an interface for the model
 with gr.Interface(predict, "textbox", "text") as interface:
     interface.launch()
-
-interface.launch()
